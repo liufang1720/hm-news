@@ -23,6 +23,10 @@
 
     <!-- <hm-input placeholder="请输入昵称"></hm-input> -->
     <hm-button @click="login">登录</hm-button>
+    <div class="go-register">
+      没有账号?去
+      <router-link class="link" to="/register">注册</router-link>
+    </div>
   </div>
 </template>
 
@@ -59,8 +63,22 @@ export default {
       username: '',
       password: ''
     }
+  },
+  created() {
+    console.log(this.$route)
+    this.username = this.$route.params.username
+    this.password = this.$route.params.password
   }
 }
 </script>
 
-<style scoped></style>
+<style lang="less" scoped>
+.go-register {
+  padding: 0 20px;
+  text-align: right;
+  font-size: 18px;
+  .link {
+    color: orange;
+  }
+}
+</style>

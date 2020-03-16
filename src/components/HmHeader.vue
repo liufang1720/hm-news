@@ -28,6 +28,7 @@ export default {}
   .center {
     flex: 1;
     font-weight: 700;
+    font-size: 20px;
   }
 }
 </style>
